@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\CreateController;
+use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\UpdateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +20,19 @@ use Illuminate\Support\Facades\Route;
 //Home
 Route::get('/', [PagesController::class, 'index']);
 
-
 //Books & Categories
+
+//Categories
 Route::get('/categories', [PagesController::class, 'categories']);
+//Create Categories
+Route::post('/categories/add', [CreateController::class, 'categories']);
+//Update Categories
+Route::post('/categories/update/{id}', [UpdateController::class, 'categories']);
+//Delete Categories
+Route::get('/categories/delete/{id}', [DeleteController::class, 'categories']);
+
+
+//Books
+Route::get('/categories/{id}/books', [PagesController::class, 'books']);
+//Create Books
+Route::post('/books/add', [CreateController::class, 'books']);

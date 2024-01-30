@@ -12,7 +12,7 @@
           <li class="nav-item">
             <a class="nav-link @if ($link == "home")
                 actives
-            @endif" aria-current="page" href="#">Home</a>
+            @endif" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link @if ($link == "category")

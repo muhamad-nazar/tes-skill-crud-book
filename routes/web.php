@@ -44,3 +44,6 @@ Route::post('/books/{id}/update', [UpdateController::class, 'books']);
 Route::get('/books/{id}/deletes', [DeleteController::class, 'books']);
 //Views Books
 Route::get('/books/{id}/{title}', [PagesController::class, 'viewBooks']);
+
+//Filter Books
+Route::get('/filter', [PagesController::class, 'filter']);

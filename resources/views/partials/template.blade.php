@@ -13,6 +13,9 @@
     @yield('content')
     <!--Contents-->
 
+    <!--Footer-->
+    @include('partials.footer')
+    <!--End Footer-->
     <!--Script-->
 
     @include('partials.script')

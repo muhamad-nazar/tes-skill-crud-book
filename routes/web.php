@@ -36,3 +36,11 @@ Route::get('/categories/delete/{id}', [DeleteController::class, 'categories']);
 Route::get('/categories/{id}/books', [PagesController::class, 'books']);
 //Create Books
 Route::post('/books/add', [CreateController::class, 'books']);
+//Pages Update Books
+Route::get('/books/{id}', [PagesController::class, 'booksPages']);
+//Update Books
+Route::post('/books/{id}/update', [UpdateController::class, 'books']);
+//Delete Books
+Route::get('/books/{id}/deletes', [DeleteController::class, 'books']);
+//Views Books
+Route::get('/books/{id}/{title}', [PagesController::class, 'viewBooks']);

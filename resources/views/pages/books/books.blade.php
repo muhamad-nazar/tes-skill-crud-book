@@ -44,8 +44,8 @@
 
                         <!-- Description Input -->
                         <div class="mb-3">
-                            <label for="editor" class="form-label">Description</label>
-                            <textarea name="description" id="editor"></textarea>
+                            <label for="description" class="form-label">Description</label>
+                            <textarea class="form-control mb-3" name="description" required></textarea>
                         </div>
 
                         <!-- Image Input -->
@@ -63,7 +63,7 @@
 
                         <!-- Price -->
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control" name="price" id="floatingInput" placeholder="Price" required>
+                            <input type="text" class="form-control" name="price" id="floatingInput" placeholder="Price" required>
                             <label for="floatingInput">Price</label>
                         </div>
 
@@ -86,8 +86,8 @@
     <!-- End Modal Create Books -->
 
 
-    <!-- DataTales Categories -->
-    <div class="card shadow mb-4">
+    <!-- DataTales Books -->
+    <div class="card shadow mb-5">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold" style="color: #1D3557;font-weight:600;">Category: {{ $nameCategory }}</h6>
         </div>
@@ -104,7 +104,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!--Looping and Update Categories -->
+                        <!--Looping and Update Books -->
                         @foreach ($books as $b)
                         <tr class="text-center">
                                 <td style="border-bottom: 1px solid #dee2e6">
@@ -116,14 +116,14 @@
                                 <td style="border-bottom: 1px solid #dee2e6">
                                     {{ $b->release_year }}
                                 </td>
-                                <td style="border-bottom: 1px solid #dee2e6"><a class="btn text-primary" href="/categories/{{ $b->id }}/books"><i class="bi bi-table"></i></a></td>
+                                <td style="border-bottom: 1px solid #dee2e6"><a class="btn text-primary" href="/books/{{ $b->id }}/{{ $b->title }}"><i class="bi bi-table"></i></a></td>
                                 <td style="border-bottom: 1px solid #dee2e6">
-                                    <a class="btn text-warning" href=""><i class="bi bi-pencil-square"></i></a> |
-                                    <a class="btn text-danger" onclick="return confirm('Sure to Delete This Categories From List Category?')" href="/categories/delete/{{ $b->id }}"><i class="bi bi-trash-fill"></i></a></td>
+                                    <a class="btn text-warning" href="/books/{{ $b->id }}"><i class="bi bi-pencil-square"></i></a> |
+                                    <a class="btn text-danger" onclick="return confirm('Sure to Delete This Book From This Category?')" href="/books/{{ $b->id }}/deletes"><i class="bi bi-trash-fill"></i></a></td>
                             </form>
                         </tr>
                         @endforeach
-                        <!--Looping and Update Categories -->
+                        <!--Looping and Update books -->
                     </tbody>
                 </table>
             </div>

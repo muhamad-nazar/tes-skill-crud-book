@@ -67,6 +67,7 @@
                                 @csrf
                                 <td style="border-bottom: 1px solid #dee2e6">
                                     <input type="text" required value="{{ $c->name }}" name="category" class="form-control">
+                                    <span style="display: none">{{ $c->name }}</span>
                                 </td>
                                 <td style="border-bottom: 1px solid #dee2e6"><button class="btn text-warning" type="submit"><i class="bi bi-pencil-square"></i></button></td>
                                 <td style="border-bottom: 1px solid #dee2e6"><a class="btn text-primary" href="/categories/{{ $c->id }}/books"><i class="bi bi-table"></i></a></td>

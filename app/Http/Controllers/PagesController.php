@@ -44,4 +44,27 @@ class PagesController extends Controller
             "category" => $categories
         ]);
     }
+
+    //Pages Update Books
+    public function booksPages($id) {
+        $books = Books::find($id);
+        $categories = Category::all();
+        return view('pages.books.books-update', [
+            "title" => "Update Books | " . $books->title,
+            "link" => "category",
+            "books" => $books,
+            "category" => $categories
+        ]);
+    }
+
+    //View Books
+    public function viewBooks($id, $title) {
+        $books = Books::find($id);
+
+        return view('pages.books.books-views', [
+            "title" => "Views | " . $books->title,
+            "link" => "category",
+            "books" => $books,
+        ]);
+    }
 }

@@ -33,4 +33,18 @@ table {
     color: #fff;
 }
 
+/*Detail Books*/
+.books-img {
+    width: 150px;
+}
 
+.books-title {
+    font-family: "Crimson Text", serif;
+    color: #1D3557;
+    font-size: 1.3em;
+}
+
+.books-description {
+    font-size: 1em;
+    font-family: "Crimson Text", serif;
+}

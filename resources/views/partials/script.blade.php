@@ -33,12 +33,3 @@
         });
     </script>
 @endif
-
-<!--Textarea-->
-<script>
-    ClassicEditor
-        .create( document.querySelector('#editor') )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>

@@ -18,8 +18,3 @@
 
 <!-- DataTables CSS -->
 <link href="{{ asset('asset/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
-<script src="https://cdn.tiny.cloud/1/qtkv2bof9a50cjv2gnp8gplvf38f1zdeoavgutwgqbyc7ksb/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-
-<!--Textarea-->
-<script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
-

@@ -58,7 +58,7 @@ Route::get('/books/{id}/{title}', [PagesController::class, 'viewBooks']);
 Route::get('/filter', [PagesController::class, 'filter']);
 
 //Login & Register
-Route::get('/login', [AuthController::class, 'login']);
+Route::get('/login', [AuthController::class, 'login'])->name('login');
 //Register
 Route::get('/register', [AuthController::class, 'register']);
 //Register Action

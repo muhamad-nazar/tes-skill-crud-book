@@ -4,12 +4,14 @@
 <div class="container mt-4">
 
     <!--BreadCrumb-->
+    @auth
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="/categories" style="text-decoration: none">Categories</a></li>
           <li class="breadcrumb-item"><a href="/categories/{{ $books->categories_id }}/books" style="text-decoration: none">{{ $books->category->name }}</a></li>
         </ol>
     </nav>
+    @endauth
     <!--End Breadcrumb-->
     <div class="row">
         <div class="col-md-12">

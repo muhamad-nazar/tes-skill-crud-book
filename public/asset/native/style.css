@@ -48,3 +48,32 @@ table {
     font-size: 1em;
     font-family: "Crimson Text", serif;
 }
+
+/*Login*/
+.card-login {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.line-login {
+    max-width: 480px;
+    margin: 0 auto;
+    height:2px;
+    background-color: #1D3557;
+}
+
+.btn-login {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.login-register {
+    font-family: "Crimson Text", serif;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.showPassword {
+    font-size: 0.9em;
+}

@@ -14,14 +14,22 @@
                 actives
             @endif" aria-current="page" href="/">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link @if ($link == "category")
-                actives
-            @endif" href="/categories">Books & Category</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Login/Register</a>
-          </li>
+          @auth
+                <li class="nav-item">
+                    <a class="nav-link @if ($link == "category")
+                        actives
+                    @endif" href="/categories">Books & Category</a>
+                </li>
+                <!-- Tampilkan tautan Logout jika pengguna sudah login -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout" onclick="return confirm('Sure To Logout?')"><i class="bi bi-box-arrow-right"></i> Logout</a>
+                </li>
+            @else
+                <!-- Tampilkan tautan Login/Register jika pengguna belum login -->
+                <li class="nav-item">
+                    <a class="nav-link @if ($link == "login") actives @endif" href="/login">Login/Register</a>
+                </li>
+            @endauth
         </ul>
       </div>
     </div>

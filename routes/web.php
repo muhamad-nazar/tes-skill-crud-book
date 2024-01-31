@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\PagesController;
@@ -19,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 
 //Home
 Route::get('/', [PagesController::class, 'index']);
+
+Route::middleware(['auth'])->group(function () {
 
 //Books & Categories
 
@@ -42,8 +45,23 @@ Route::get('/books/{id}', [PagesController::class, 'booksPages']);
 Route::post('/books/{id}/update', [UpdateController::class, 'books']);
 //Delete Books
 Route::get('/books/{id}/deletes', [DeleteController::class, 'books']);
+
+
+//Logout
+Route::get('/logout', [AuthController::class, 'logout']);
+});
+
 //Views Books
 Route::get('/books/{id}/{title}', [PagesController::class, 'viewBooks']);
 
 //Filter Books
 Route::get('/filter', [PagesController::class, 'filter']);
+
+//Login & Register
+Route::get('/login', [AuthController::class, 'login']);
+//Register
+Route::get('/register', [AuthController::class, 'register']);
+//Register Action
+Route::post('/register-account', [AuthController::class, 'registerAction']);
+//Login Action
+Route::post('/login-action', [AuthController::class, 'loginAction']);

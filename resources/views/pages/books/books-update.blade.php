@@ -57,7 +57,7 @@
 
         <!-- Price -->
         <div class="form-floating mb-3">
-            <input type="number" class="form-control" name="price" id="floatingInput" placeholder="Price" required value="{{ $books->price }}">
+            <input type="text" class="form-control" name="price" id="floatingInput" placeholder="Price" required value="{{ $books->price }}">
             <label for="floatingInput">Price</label>
         </div>
 

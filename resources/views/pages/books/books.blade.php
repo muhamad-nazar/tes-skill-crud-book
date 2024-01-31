@@ -119,8 +119,8 @@
                                 <td style="border-bottom: 1px solid #dee2e6"><a class="btn text-primary" href="/books/{{ $b->id }}/{{ $b->title }}"><i class="bi bi-table"></i></a></td>
                                 <td style="border-bottom: 1px solid #dee2e6">
                                     <a class="btn text-warning" href="/books/{{ $b->id }}"><i class="bi bi-pencil-square"></i></a> |
-                                    <a class="btn text-danger" onclick="return confirm('Sure to Delete This Book From This Category?')" href="/books/{{ $b->id }}/deletes"><i class="bi bi-trash-fill"></i></a></td>
-                            </form>
+                                    <a class="btn text-danger" onclick="return confirm('Sure to Delete This Book From This Category?')" href="/books/{{ $b->id }}/deletes"><i class="bi bi-trash-fill"></i></a>
+                                </td>
                         </tr>
                         @endforeach
                         <!--Looping and Update books -->
